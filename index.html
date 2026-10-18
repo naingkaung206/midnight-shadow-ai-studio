@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090d">
+<title>Midnight Shadow AI Studio</title>
+<style>
+:root{--bg:#08080c;--panel:#121219;--panel2:#191920;--line:#30303a;--red:#ef3340;--muted:#a8a8b4;--text:#f6f6f8;--gold:#e8c77b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#241015 0,#09090d 45%,#060609 100%);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif;min-height:100vh}
+header{padding:24px 18px 18px;border-bottom:1px solid #29202a;background:#0a090de8;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.wrap{max-width:1080px;margin:auto}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border:1px solid #7e2931;border-radius:14px;background:linear-gradient(145deg,#341118,#100d12);display:grid;place-items:center;font-size:25px;box-shadow:0 0 24px #ef334022}.brand h1{font-size:clamp(18px,3vw,26px);margin:0;letter-spacing:.2px}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px}.badge{margin-left:auto;color:#ffb8bd;border:1px solid #6d2830;background:#2a1015;border-radius:99px;padding:7px 10px;font-size:11px;white-space:nowrap}
+main{max-width:1080px;margin:24px auto;padding:0 16px 48px}.hero{padding:22px 0 18px}.eyebrow{color:var(--red);font-size:12px;font-weight:800;letter-spacing:2px}.hero h2{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:10px 0}.hero h2 span{color:var(--red)}.hero p{max-width:680px;color:#c2c2cc;line-height:1.7;margin:0}
+.grid{display:grid;grid-template-columns: minmax(0, .9fr) minmax(0,1.1fr);gap:16px;margin-top:18px}.card{background:linear-gradient(180deg,#15151d,#101016);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 35px #0003}.card h3{margin:0 0 16px;font-size:17px}.num{color:var(--red);margin-right:8px}
+label{display:block;font-size:13px;color:#dedee5;margin:14px 0 7px}input,select,textarea{width:100%;background:#09090e;color:#f4f4f7;border:1px solid #3a3945;border-radius:10px;padding:12px;font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--red)}textarea{min-height:92px;resize:vertical;line-height:1.6}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{border:0;border-radius:11px;padding:12px 15px;font-weight:750;cursor:pointer;transition:.15s}.btn-primary{background:linear-gradient(100deg,#e92736,#a91b2b);color:white;box-shadow:0 7px 20px #ed243326}.btn-secondary{background:#22222b;border:1px solid #454550;color:#f4f4f7}.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.hint{font-size:12px;color:var(--muted);line-height:1.6}.output{min-height:360px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.tab{background:#202029;color:#c7c7d1;border:1px solid #393945;border-radius:9px;padding:8px 10px;font-size:12px;cursor:pointer}.tab.active{color:white;border-color:#9c3039;background:#35131a}.result{white-space:pre-wrap;overflow-wrap:anywhere;background:#09090e;border:1px solid #30303a;border-radius:12px;padding:14px;min-height:260px;font-size:13px;line-height:1.8;color:#e6e6ed}.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.step{background:#111118;border:1px solid #2d2d38;border-radius:12px;padding:13px}.step b{display:block;font-size:12px;margin:8px 0 4px}.step small{color:var(--muted);line-height:1.5}.icon{font-size:22px}.status{display:inline-block;font-size:10px;padding:4px 7px;border-radius:99px;background:#24242d;color:#d5d5dd;margin-top:8px}.warning{border:1px solid #6b5225;background:#211a0d;border-radius:12px;padding:13px;color:#e9d7a8;font-size:12px;line-height:1.7;margin-top:15px}.platforms{display:flex;gap:8px;flex-wrap:wrap}.platform{border:1px solid #393944;background:#17171f;padding:9px 11px;border-radius:10px;font-size:12px}.platform input{width:auto;margin-right:6px;accent-color:var(--red)}footer{text-align:center;color:#777783;font-size:11px;padding:18px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.workflow{grid-template-columns:1fr 1fr}.badge{display:none}.output{min-height:300px}}@media(max-width:420px){.row{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap brand"><div class="logo">☾</div><div><h1>Midnight Shadow <span style="color:#ef3340">AI Studio</span></h1><p>မြန်မာ Horror Content Creator Studio</p></div><div class="badge">BETA · FREE STARTER</div></div></header>
+<main>
+<section class="hero"><div class="eyebrow">YOUR STORY. YOUR SHADOW.</div><h2>သရဲဇာတ်လမ်းတွေကို<br><span>ဖန်တီးဖို့ စတင်လိုက်ပါ။</span></h2><p>ဇာတ်လမ်းအကြံ၊ ဇာတ်ညွှန်း၊ Scene ခွဲခြင်းနဲ့ AI video prompt တွေကို တစ်နေရာတည်းမှာ ပြင်ဆင်ပါ။ ဖုန်း Browser မှာလည်း အသုံးပြုနိုင်အောင် ပြုလုပ်ထားပါတယ်။</p></section>
+<div class="grid">
+<section class="card">
+<h3><span class="num">01.</span> ဇာတ်လမ်းသတ်မှတ်ပါ</h3>
+<label for="title">ဇာတ်လမ်းခေါင်းစဉ်</label><input id="title" value="သန်းခေါင်ယံမှာ တံခါးခေါက်သံ">
+<div class="row"><div><label for="type">ဇာတ်လမ်းအမျိုးအစား</label><select id="type"><option>မြန်မာသရဲဇာတ်လမ်း</option><option>သည်းထိတ်ရင်ဖို</option><option>သရဲနှင့် ဝမ်းနည်းဖွယ်</option><option>လျှို့ဝှက်ဆန်းကြယ်မှု</option></select></div><div><label for="duration">ဗီဒီယိုကြာချိန်</label><select id="duration"><option value="30">30 စက္ကန့်</option><option value="60" selected>60 စက္ကန့်</option><option value="90">90 စက္ကန့်</option><option value="180">3 မိနစ်</option></select></div></div>
+<label for="setting">နေရာ / နောက်ခံ</label><input id="setting" value="မြန်မာကျေးရွာ၊ မိုးရွာနေသော ည၊ သစ်သားအိမ်ဟောင်း">
+<label for="idea">ဇာတ်လမ်းအကြံ (မထည့်လည်းရပါတယ်)</label><textarea id="idea" placeholder="ဥပမာ - ညတိုင်း တံခါးလာခေါက်သူက ဘယ်သူလဲ...">ညတိုင်း သန်းခေါင်ယံအချိန်မှာ တံခါးလာခေါက်ပေမဲ့ အပြင်မှာ ဘယ်သူမှ မရှိဘူး။ တစ်ညမှာတော့ အိမ်ထဲကနေ ကိုယ့်အသံနဲ့ ပြန်ဖြေသံကြားလာတယ်။</textarea>
+<label>တင်မယ့်နေရာ</label><div class="platforms"><label class="platform"><input type="checkbox" checked> YouTube Shorts</label><label class="platform"><input type="checkbox" checked> TikTok</label><label class="platform"><input type="checkbox" checked> Facebook Reels</label></div>
+<div class="actions"><button class="btn btn-primary" id="generate">✦ ဇာတ်ညွှန်းနှင့် Prompt ဖန်တီးမယ်</button><button class="btn btn-secondary" id="clear">ပြန်စမယ်</button></div>
+<p class="hint">မှတ်ချက် — ဒီ Starter ဗားရှင်းက Template ကို Browser ထဲမှာ ဖန်တီးပေးတာပါ။ တကယ့် AI ဖန်တီးမှုအတွက် AI API ချိတ်ဆက်ရန် လိုအပ်ပါတယ်။</p>
+</section>
+<section class="card output">
+<h3><span class="num">02.</span> ဖန်တီးထားသော Output</h3>
+<div class="tabs"><button class="tab active" data-tab="script">ဇာတ်ညွှန်း</button><button class="tab" data-tab="scenes">Scene Prompts</button><button class="tab" data-tab="voice">Voice & Caption</button><button class="tab" data-tab="publish">တင်ရန်အစီအစဉ်</button></div>
+<div id="result" class="result">ဘယ်ဘက်မှာ ဇာတ်လမ်းအချက်အလက်တွေ ဖြည့်ပြီး “ဇာတ်ညွှန်းနှင့် Prompt ဖန်တီးမယ်” ကို နှိပ်ပါ။</div>
+<div class="actions"><button class="btn btn-secondary" id="copy">စာသားကူးယူမယ်</button><button class="btn btn-secondary" id="download">TXT ဖိုင်ထုတ်မယ်</button></div>
+</section>
+</div>
+<section class="card" style="margin-top:16px"><h3><span class="num">03.</span> အလိုအလျောက်လုပ်ငန်းစဉ်</h3><div class="workflow">
+<div class="step"><div class="icon">📝</div><b>ဇာတ်လမ်းရေးခြင်း</b><small>ဇာတ်ညွှန်း၊ Hook၊ အဆုံးသတ်</small><span class="status">Starter: Template</span></div>
+<div class="step"><div class="icon">🎙️</div><b>Voice & Captions</b><small>မြန်မာအသံ၊ စာတန်းထိုး</small><span class="status">AI service လိုအပ်</span></div>
+<div class="step"><div class="icon">🎬</div><b>Video Rendering</b><small>Scene များကို ဗီဒီယိုပြောင်းခြင်း</small><span class="status">Video API လိုအပ်</span></div>
+<div class="step"><div class="icon">📤</div><b>Auto Posting</b><small>Platform ခွင့်ပြုချက်နဲ့ တင်ခြင်း</small><span class="status">API ချိတ်ဆက်ရန်</span></div>
+</div><div class="warning"><b>လုံခြုံရေးနှင့် ကုန်ကျစရိတ်:</b> ဒီ Demo က သင့်ရဲ့ Social Media အကောင့်တွေကို မချိတ်ဆက်ထားသေးပါ။ Password မထည့်ပါနဲ့။ Auto-posting အတွက် YouTube, TikTok, Meta တို့ရဲ့ တရားဝင် OAuth/API ခွင့်ပြုချက်၊ backend server နဲ့ လိုအပ်သလို paid AI API များ လိုနိုင်ပါတယ်။ ပထမဆုံး ဗီဒီယိုတစ်ပုဒ်ကို ဖန်တီးပြီး ကိုယ်တိုင်တင်ကာ စမ်းသပ်ပါ။</div></section>
+</main><footer>Midnight Shadow AI Studio · Free Starter Prototype · No account credentials collected</footer>
+<script>
+let currentTab='script', outputs={};
+const $=id=>document.getElementById(id);
+function build(){
+ const title=$('title').value.trim()||'ခေါင်းစဉ်မရှိသေးပါ';
+ const type=$('type').value, duration=+$('duration').value, setting=$('setting').value.trim()||'မြန်မာကျေးရွာ၊ ညအမှောင်';
+ const idea=$('idea').value.trim()||'လျှို့ဝှက်ဆန်းကြယ်တဲ့ ဖြစ်ရပ်တစ်ခု';
+ const n=Math.max(3,Math.min(9,Math.ceil(duration/10)));
+ const hook=`“${title}” — ${idea}`;
+ outputs.script=`ခေါင်းစဉ်: ${title}\nအမျိုးအစား: ${type}\nကြာချိန်: ${duration} စက္ကန့်\n\n[OPENING HOOK]\n${hook}\n\n[ဇာတ်ညွှန်း Draft]\nညသန်းခေါင်ယံအချိန်။ ${setting} မှာ လေပြင်းတိုက်ပြီး မိုးစက်တွေ ပြတင်းပေါက်ကို လာရိုက်နေတယ်။\n\nတံခါးကို သုံးချက်တိတိ ခေါက်သံကြားရတယ်။ အိမ်ရှင်က “ဘယ်သူလဲ” လို့ မေးပေမဲ့ အပြင်မှာ ဘယ်သူမှ မရှိဘူး။\n\nခဏကြာတော့ အိမ်ထဲက အမှောင်ထောင့်တစ်နေရာကနေ သူ့ကိုယ်ပိုင်အသံနဲ့ “တံခါးဖွင့်ပေးပါ…” လို့ တိုးတိုးပြောလာတယ်။\n\nသူ နောက်လှည့်ကြည့်လိုက်တဲ့အခါ… တံခါးနောက်က အရိပ်က သူ့ထက် အရင်လှုပ်ရှားနေတယ်။\n\n[CLIFFHANGER]\nတံခါးကို ဘယ်သူခေါက်ခဲ့တာလဲ။ အိမ်ထဲမှာ သူတစ်ယောက်တည်း ဟုတ်ရဲ့လား။ အဖြေကို နောက်အပိုင်းမှာ ဆက်ကြည့်ပါ။\n\nမှတ်ချက်: ဒီစာသားဟာ စတင်ပြင်ဆင်ရန် Draft ဖြစ်ပြီး AI နဲ့ အပြည့်အဝရေးသားထားတာ မဟုတ်သေးပါ။`;
+ let scenes=`PROJECT: ${title}\nFORMAT: Vertical 9:16, cinematic Myanmar horror, realistic lighting, no gore, no on-screen text unless added in editor.\nLOCATION: ${setting}\n\n`;
+ for(let i=1;i<=n;i++){
+  let desc=[
+   'Establishing shot of a quiet Myanmar village at midnight, rain falling, distant thunder, slow cinematic push-in.',
+   'Inside an old wooden Myanmar house, a worried adult hears three knocks at the front door, candle flickering.',
+   'Close-up of the wooden door trembling slightly; wet footprints appear outside, but no person is visible.',
+   'The character slowly approaches the door, hand shaking near the latch, suspenseful low-key lighting.',
+   'A dark corner behind the character seems to move independently; slow camera pan, eerie atmosphere.',
+   'The character hears their own whisper coming from the darkness and turns around in fear.',
+   'A tall shadow stretches across the wall toward the character, moonlight and lightning reveal its outline.',
+   'The door creaks open by itself; empty rainy night outside, a whisper comes from behind the camera.',
+   'Close-up on the character’s frightened eyes, sudden blackout, one final knock in the darkness.'
+  ][(i-1)%9];
+  scenes+=`SCENE ${i} (${Math.round(duration/n)} sec): ${desc}\nCamera: slow deliberate movement, stable character appearance, realistic Myanmar environment, atmospheric sound, vertical 9:16.\n`;
+ }
+ outputs.scenes=scenes;
+ outputs.voice=`VOICE DIRECTION\nNarration language: Burmese (Myanmar).\nVoice: low, calm, mature storyteller; intimate and suspenseful, clear pronunciation, steady pace; gradually lower the volume near the reveal. Avoid exaggerated shouting.\nSound design: rain ambience, distant thunder, three wooden knocks, soft room tone, short silence before the twist. Use only licensed/royalty-free sounds.\n\nCAPTION / POST TEXT\n${title} 👻\nညသန်းခေါင်မှာ တံခါးလာခေါက်သူက ဘယ်သူလဲ… နောက်ဆုံးအထိ ကြည့်ပြီးမှ သိရမယ်။\n\nHASHTAGS\n#သရဲဇာတ်လမ်း #မြန်မာသရဲ #သည်းထိတ်ရင်ဖို #HorrorStory #MyanmarHorror #Shorts #TikTokMyanmar`;
+ const selected=[...document.querySelectorAll('.platform input:checked')].map(x=>x.parentElement.textContent.trim());
+ outputs.publish=`POSTING CHECKLIST\n1. Export vertical video: 1080 × 1920 (9:16).\n2. Check Burmese voice pronunciation and captions.\n3. Check that music/images/video assets are yours or licensed.\n4. Upload separately to: ${selected.length?selected.join(', '):'Platform မရွေးရသေးပါ'}.\n5. Review title, cover, captions, audience settings, and copyright checks.\n6. Schedule using each platform's supported tools if available.\n\nAUTO-POST STATUS: မချိတ်ဆက်ရသေးပါ။ Official API/OAuth setup and a secure backend are required; this demo cannot publish directly.`;
+ show();
+}
+function show(){ $('result').textContent=outputs[currentTab]||'ဒီ Tab အတွက် အကြောင်းအရာ မရှိသေးပါ။';document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===currentTab));}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{currentTab=b.dataset.tab;show()}));
+$('generate').addEventListener('click',()=>{build()});
+$('clear').addEventListener('click',()=>{$('title').value='';$('idea').value='';$('setting').value='';outputs={};$('result').textContent='အချက်အလက်တွေ ဖြည့်ပြီး ဖန်တီးပါ။'});
+$('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('result').textContent);$('copy').textContent='ကူးယူပြီးပါပြီ ✓';setTimeout(()=>$('copy').textContent='စာသားကူးယူမယ်',1500)}catch(e){alert('စာသားကို ဖိထားပြီး Copy လုပ်ပါ။')}});
+$('download').addEventListener('click',()=>{let textOut=outputs[currentTab]||$('result').textContent;let blob=new Blob([textOut],{type:'text/plain;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`midnight-shadow-${currentTab}.txt`;a.click();URL.revokeObjectURL(a.href)});
+</script>
+</body></html>
